@@ -52,3 +52,32 @@ console.log(response);
 // Outputs: How do you like them apples? Orange you glad I didn't say banana again?
 
 // The break statement is crucial in a switch statement. Without it, execution will continue to the next case, even if it doesn't match.
+
+
+// ****************************************
+
+// Grouping of Cases
+
+let grade = "B";
+let feedback;
+
+switch (grade) {
+    case "A":
+    case "B":
+        feedback = "Good job!";
+        break;
+    case "C":
+        feedback = "You can do better.";
+        break;
+    case "D":
+    case "F":
+        feedback = "You need to study more.";
+        break;
+    default:
+        feedback = "Invalid grade";
+}
+
+console.log(feedback); // Outputs: Good job!
+
+// In this example, both cases "A" and "B" will result in "Good job!" being assigned to feedback. 
+// Similarly, both "D" and "F" will result in "You need to study more.
