@@ -8,7 +8,7 @@ console.log(Number(null));    // 0
 console.log(Number(undefined));// NaN
 console.log(Number("hello")); // NaN
 
-// Notice how most falsy values are converted to 0, except undefined and strings which become NaN.
+// Notice how most falsy values are converted to 0, except undefined and strings that don't represent valid numbers which become NaN.
 
 // Using parseInt() and parseFloat()
 console.log(parseInt("123"));     // 123
