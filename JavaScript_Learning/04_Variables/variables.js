@@ -54,15 +54,79 @@ const MAX_USERS = 100;
 const DEFAULT_LANGUAGE = 'English';
 const COMPANY_NAME = 'Acme Corporation';
 
-function createUser(username) {
-    if (getCurrentUserCount() < MAX_USERS) {
-        // Create user logic here
-        console.log(`Creating user ${username} with default language ${DEFAULT_LANGUAGE}`);
-    } else {
-        console.log(`Cannot create user. ${COMPANY_NAME} has reached the maximum user limit.`);
-    }
-}
+// function createUser(username) {
+//     if (getCurrentUserCount() < MAX_USERS) {
+//         // Create user logic here
+//         console.log(`Creating user ${username} with default language ${DEFAULT_LANGUAGE}`);
+//     } else {
+//         console.log(`Cannot create user. ${COMPANY_NAME} has reached the maximum user limit.`);
+//     }
+// }
 
-createUser('Alice');
+ // createUser('Alice');
 
 // But why? This indicates that these values shouldn’t be changed throughout the entire program.
+
+// ****************************************************************************
+
+// Using descriptive names for variables.
+
+// Bad
+let d = new Date().getTime(); 
+// let x = userList.find(u => u.id === 123);
+
+// Good
+let currentTimestamp = new Date().getTime();
+// let targetUser = userList.find(user => user.id === 123);
+
+// ****************************************************************************
+
+// Using camelCase for variable names.
+
+let firstName = "John";
+let lastLoginDate = new Date();
+
+// ****************************************************************************
+
+// Using consistent naming conventions.
+
+// Inconsistent
+let user_name = "Alice";
+// let userAge = 30;
+let UserEmail = "alice@example.com";
+
+// Consistent
+let userName = "Alice";
+let userAge = 30;
+let userEmail = "alice@example.com";
+
+// ****************************************************************************
+
+// Declaring variables at the top of their scope.
+
+function calculateCircleProperties(radius) {
+    let diameter, circumference, area;
+
+    diameter = radius * 2;
+    circumference = 2 * Math.PI * radius;
+    area = Math.PI * radius * radius;
+
+    return { diameter, circumference, area };
+}
+
+// ****************************************************************************
+
+// Using const by default and let when you know the value will change.
+
+// const PI = 3.14159;
+const BASE_URL = '<https://api.example.com>';
+
+let currentUser = 'Alice';
+let score = 0;
+
+function updateScore(newScore) {
+    score = newScore;  // We use let for score because it changes
+}
+
+
+
