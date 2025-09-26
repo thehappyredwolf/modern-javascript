@@ -1,6 +1,6 @@
 let single = 'Single quotes work';
 let double = "Double quotes work too";
-let backticks = `Backticks allow embedded expressions ${2 + 2}`;
+let backticks = `Backticks allow embedded expressions ${2 + 2}`; // Also known as Template Literals.
 
 console.log(single);   // Outputs: Single quotes work
 console.log(double);   // Outputs: Double quotes work too
