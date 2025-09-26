@@ -44,3 +44,25 @@ scopeExample();
 console.log(globalVar); // This works fine.
 // console.log(functionVar); // This would cause an error.
 // As a rule of thumb, always make sure to use variables only within their accessible scope.
+
+
+// ****************************************************************************
+
+// For constants that are known before execution and don't change, it's common to use uppercase names.
+
+const MAX_USERS = 100;
+const DEFAULT_LANGUAGE = 'English';
+const COMPANY_NAME = 'Acme Corporation';
+
+function createUser(username) {
+    if (getCurrentUserCount() < MAX_USERS) {
+        // Create user logic here
+        console.log(`Creating user ${username} with default language ${DEFAULT_LANGUAGE}`);
+    } else {
+        console.log(`Cannot create user. ${COMPANY_NAME} has reached the maximum user limit.`);
+    }
+}
+
+createUser('Alice');
+
+// But why? This indicates that these values shouldn’t be changed throughout the entire program.
