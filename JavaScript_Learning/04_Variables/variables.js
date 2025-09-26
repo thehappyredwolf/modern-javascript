@@ -24,3 +24,23 @@ person.age = 31; // We can modify properties of a const object.
 console.log(person); // Outputs: {name: "Charlie", age: 31}
 
 // person = {name: "David", age: 25}; // This would cause an error: Assignment to a constant variable.
+
+
+// ***************************************************************************
+
+let globalVar = "I'm visible everywhere"; // Example of using a global variable.
+
+function scopeExample() {
+    let functionVar = "I'm only visible in this function"; // Example of using a function var.
+    if (true) {
+        let blockVar = "I'm only visible in this block"; // Example of using a block var.
+        console.log(globalVar, functionVar, blockVar); // This works fine.
+    }
+    console.log(globalVar, functionVar); // This works fine.
+    // console.log(blockVar); // This would cause an error
+}
+
+scopeExample();
+console.log(globalVar); // This works fine.
+// console.log(functionVar); // This would cause an error.
+// As a rule of thumb, always make sure to use variables only within their accessible scope.
